@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../../apps/sfaclog/src/app/globals.css"
 
 export interface ButtonProps {
   onClick?: () => void;
@@ -21,7 +22,7 @@ function Button({
   if (size === "small") dimensions = "w-5 h-2.5";
   if (size === "large") dimensions = "w-20 h-10";
   const bgColor = backgroundColor || "bg-blue-500";
-  const txtColor = color || "text-white";
+  const txtColor = color || "bg-blue-500";
 
   return (
     <button className={` ${bgColor} ${txtColor} ${dimensions}  `}>
