@@ -1,2 +1,4 @@
-import tailwind from "../../packages/ui/tailwind.config";
-export default tailwind("sfaclog");
+const baseConfig = require("../../packages/tailwindcss/tailwind.config");
+
+/** @type {import('tailwindcss').Config} */
+module.exports = { ...baseConfig };
