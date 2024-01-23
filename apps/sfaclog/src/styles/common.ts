@@ -42,5 +42,19 @@ export const Common = {
       warning : "#FF0000",
       success : "#07A320",
     },
+  },
+  font : {
+    "body/B_32": {
+      fontSize: "32px",
+      fontWeight: "bold",
+    },
+  },
+  space : {
+    xs : "8px",
+    s : "16px",
+    md : "24px",
+    lg : "40px",
+    xl : "60px",
+    xxl : "100px",
   }
 }
