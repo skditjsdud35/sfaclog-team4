@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Button from "./Button";
+import  Button, { ButtonProps } from "./Button";
 
 // 메타 데이터, 제네릭에 Button 컴포넌트의 타입을 넘겨준다.
 const meta: Meta<typeof Button> = {
@@ -21,12 +21,10 @@ type Story = StoryObj<typeof Button>;
 
 // 하나의 스토리, 스토리는 named export 해준다
 // 스토리 이름도 사이드바 카테고리에 표시된다
-export const BlueButton: Story = {
-  // 컴포넌트에 필요한 arguments, 리액트 컴포넌트에게는 Props
-  args: {
-    label: "버튼",
-    backgroundColor: "bg-blue-500",
-    color: "white",
-    size: "medium",
-  },
+export const BlueButton: Story = (args: ButtonProps) => <Button {...args}/> ;
+BlueButton.args = {
+  label: "테스트 버튼",
+  backgroundColor: "bg-blue-500",
+  color: "bg-blue-500",
+  size: "medium",
 };

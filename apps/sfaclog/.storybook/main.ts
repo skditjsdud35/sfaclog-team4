@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/react-webpack5";
+import type { StorybookConfig } from "@storybook/nextjs";
 
 import { join, dirname } from "path";
 
@@ -10,7 +10,13 @@ function getAbsolutePath(value: string): any {
   return dirname(require.resolve(join(value, "package.json")));
 }
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    {
+      directory: "../../../packages/ui/src/stories/**",
+      titlePrefix: "UI",
+      files: "*.stories.*",
+    },
+  ],
   addons: [
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
@@ -18,12 +24,8 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-interactions"),
   ],
   framework: {
-    name: getAbsolutePath("@storybook/react-webpack5"),
-    options: {
-      builder: {
-        useSWC: true,
-      },
-    },
+    name: getAbsolutePath("@storybook/nextjs"),
+    options: {},
   },
   docs: {
     autodocs: "tag",
