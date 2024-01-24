@@ -35,5 +35,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "pocketbase": "^0.20.3"
+  }
 }
