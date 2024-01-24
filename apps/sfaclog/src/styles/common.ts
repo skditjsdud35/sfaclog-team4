@@ -43,7 +43,7 @@ export const Common = {
       regular: "font-normal",
     },
     lineHeight: {
-      base: "leading-normal",
+      base: "leading-6",  // 150%
     },
   },
   space: {
