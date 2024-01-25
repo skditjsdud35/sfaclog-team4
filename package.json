@@ -29,7 +29,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "pocketbase": "^0.20.3"
+    "pocketbase": "^0.20.3",
     "next-transpile-modules": "^10.0.1"
   }
 }

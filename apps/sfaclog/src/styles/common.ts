@@ -1,76 +1,58 @@
 export const Common = {
-  colors : {
-    neutral : {
-      100 : "#030303",
-      90 : "#1A1A1A",
-      80 : "#333333",
-      70 : "#4D4D4D",
-      60 : "#666666",
-      50 : "#808080",
-      40 : "#999999",
-      30 : "#B3B3B3",
-      20 : "#CCCCCC",
-      10 : "#E6E6E6",
-      5 : "#F3F3F3",
-      0 : "#FFFFFF",
+  colors: {
+    neutral: {
+      100: "black",       // #000000
+      90: "gray-100",     // #f7fafc
+      80: "gray-200",     // #edf2f7
+      70: "gray-300",     // #e2e8f0
+      60: "gray-400",     // #cbd5e0
+      50: "gray-500",     // #a0aec0
+      40: "gray-600",     // #718096
+      30: "gray-700",     // #4a5568
+      20: "gray-800",     // #2d3748
+      10: "gray-900",     // #1a202c
+      0: "white",         // #ffffff
     },
-    primary : {
-      100 : "#0059FF",
-      90 : "#196AFF",
-      80 : "#337AFF",
-      70 : "#4C8BFF",
-      60 : "#669BFF",
-      50 : "#7FACFF",
-      40 : "#99BDFF",
-      30 : "#B2CDFF",
-      20 : "#CCDEFF",
-      10 : "#E5EEFF",
-      5 : "#F5F8FF",
-    },
-    stroke : {
-      blue : "#99BDFF",
-      main : "#E6E6E6",
-      5 : "#F3F3F3",
-    },
-    background : {
-      100 : "#666666",
-      50 : "#A9A9A9",
-      5 : "#F8F8F9",
-      blue : "#F5F8FF",
-    },
-    system : {
-      warning : "#FF0000",
-      success : "#07A320",
+    primary: {
+      100: "blue-900",    // #003366
+      90: "blue-800",     // #004080
+      80: "blue-700",     // #005099
+      70: "blue-600",     // #0066b3
+      60: "blue-500",     // #007acc
+      50: "blue-400",     // #008cf5
+      40: "blue-300",     // #199bff
+      30: "blue-200",     // #4c8bff
+      20: "blue-100",     // #7facff
+      10: "blue-50",      // #b2cdff
     },
   },
-  font : {
-    size : {
-      header : "48px",
-      xxxl: "36px",
-      xxl: "32px",
-      xl: "24px",
-      lg: "20px",
-      md: "18px",
-      sm: "16px",
-      xs: "15px",
-      xxs: "14px",
-      button : "12px",
+  font: {
+    size: {
+      header: "text-4xl",  // 48px
+      xxxl: "text-3xl",    // 36px
+      xxl: "text-2xl",     // 32px
+      xl: "text-xl",       // 24px
+      lg: "text-lg",       // 20px
+      md: "text-base",     // 18px
+      sm: "text-sm",       // 14px
+      xs: "text-xs",       // 12px
     },
-    weight : {
-      bold: "700",
-      medium: "500",
-      regular: "400",
+    weight: {
+      bold: "font-bold",
+      medium: "font-medium",
+      regular: "font-normal",
     },
-    lineHeight : {
-      base : "140%",
+    lineHeight: {
+      base: "leading-6",  // 150%
     },
   },
-  space : {
-    xs: "8px",
-    s: "16px",
-    md: "24px",
-    lg: "40px",
-    xl: "60px",
-    xxl: "100px",
-  }
-}
+  space: {
+    xs: "m-2",   // 8px
+    s: "m-4",    // 16px
+    md: "m-6",   // 24px
+    lg: "m-10",  // 40px
+    xl: "m-16",  // 60px
+    xxl: "m-28", // 100px
+  },
+};
+
