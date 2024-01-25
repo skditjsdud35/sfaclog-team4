@@ -46,13 +46,5 @@ export const Common = {
       base: "leading-6",  // 150%
     },
   },
-  space: {
-    xs: "m-2",   // 8px
-    s: "m-4",    // 16px
-    md: "m-6",   // 24px
-    lg: "m-10",  // 40px
-    xl: "m-16",  // 60px
-    xxl: "m-28", // 100px
-  },
 };
 
