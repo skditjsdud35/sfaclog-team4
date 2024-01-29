@@ -2,6 +2,7 @@
 import {
   readAllMessage,
   readSingleMessage,
+  removeMessage,
   sendMessage,
 } from "@/utils/jaehyun";
 
@@ -35,6 +36,12 @@ export default function Home() {
     readSingleMessage("gxs2jj21ttt35k5");
   };
 
+  const onRemoveMessageClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+
+    removeMessage("gxs2jj21ttt35k5");
+  };
+
   return (
     <div>
       <h1>테스트 페이지</h1>
@@ -48,6 +55,10 @@ export default function Home() {
       </div>
       <div className="p-5 bg-blue-300 ">
         <button onClick={onReadMessageClick}>단일 메세지 읽기</button>
+      </div>
+
+      <div className="p-5 bg-blue-200">
+        <button onClick={onRemoveMessageClick}>메세지 삭제</button>
       </div>
     </div>
   );

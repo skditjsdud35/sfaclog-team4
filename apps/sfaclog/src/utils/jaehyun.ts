@@ -40,7 +40,7 @@ export const readAllMessage = async (userId: string) => {
 export const readSingleMessage = async (messageId: string) => {
   try {
     const res = await pb.collection("message").getList(1, 50, {
-      filter: `id = "${messageId}"`, 
+      filter: `id = "${messageId}"`,
     });
     console.log(res);
   } catch (err) {
@@ -48,4 +48,14 @@ export const readSingleMessage = async (messageId: string) => {
   }
 };
 
-// 단일 메세지 삭제 
+// 단일 메세지 삭제
+
+export const removeMessage = async (messageId: string) => {
+  try {
+    const res = await pb.collection("message").delete(messageId);
+
+    console.log(res);
+  } catch (err) {
+    console.error("메세지 를 읽어오지못했습니다. ", err);
+  }
+};
