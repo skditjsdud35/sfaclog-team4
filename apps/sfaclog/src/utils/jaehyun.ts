@@ -1,20 +1,10 @@
 // USER , LOG , MESSAGE
+import { MessageData } from "@/types/message";
 import pb from "./pocketbase";
 
 // 메세지 보내기
 
-interface MessageData {
-  sender: string;
-  receiver: string;
-  message: string;
-  is_read: boolean;
-}
-
-export async function sendMessage(MessageData: MessageData) {
-  const data = {
-    ...MessageData,
-  };
-
+export async function sendMessage(data: MessageData) {
   try {
     const record = await pb.collection("message").create(data);
     console.log("메세지 보내기 성공 ", record);
@@ -59,3 +49,18 @@ export const removeMessage = async (messageId: string) => {
     console.error("메세지 를 읽어오지못했습니다. ", err);
   }
 };
+
+// 제안하기
+export async function proposal(current: MessageData) {
+  const data = {
+    ...current,
+    message: "제안 요청 드립니다.",
+  };
+  try {
+    const record = await pb.collection("message").create(data);
+    console.log("제안 보내기 성공  ", record);
+    return record;
+  } catch (error) {
+    console.error("메세지를 보내지못했습니다.", error);
+  }
+}
