@@ -1,5 +1,6 @@
-import PocketBase from "pocketbase"
+import PocketBase from "pocketbase";
 
-const pb = new PocketBase (process.env.PB_URL)
+const PB_URL = "http://13.125.220.58:8090";
+const pb = new PocketBase(PB_URL);
 
 export default pb;
