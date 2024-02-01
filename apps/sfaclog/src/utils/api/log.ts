@@ -5,7 +5,8 @@ import pb from "../pocketbase";
 export const readPopularLogger = async () => {
   try {
     const records = await pb.collection("posts").getList(1, 6, {
-      sort: "+post_view",
+      sort: "+like",
+      
     });
     console.log(records);
     return records;

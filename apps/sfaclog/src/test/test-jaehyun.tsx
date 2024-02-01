@@ -1,5 +1,6 @@
 "use client";
 
+import { SignUp } from "@/utils/api/auth";
 import { readPopularLogger } from "@/utils/api/log";
 import {
   readAllMessage,
@@ -10,6 +11,7 @@ import {
 import {
   addFollowing,
   getFollow,
+  getProfile,
   proposal,
   removeFollowing,
 } from "@/utils/api/user";
@@ -67,20 +69,48 @@ export default function TestJaehyun() {
 
       <div className="p-5 bg-red-400">
         <button
-          onClick={() => addFollowing("y53u78yj042nd15", "iw1gneie52l2et5")}
+          onClick={() => addFollowing("qyk0dfkf5vd7l0v", "hwby3y9jmyu5imx")}
         >
           팔로우 하기{" "}
         </button>
       </div>
       <div className="p-5 bg-red-300">
         <button
-          onClick={() => removeFollowing("y53u78yj042nd15", "iw1gneie52l2et5")}
+          onClick={() => removeFollowing("qyk0dfkf5vd7l0v", "hwby3y9jmyu5imx")}
         >
           팔로우 삭제하기{" "}
         </button>
       </div>
       <div className="p-5 bg-green-500">
         <button onClick={() => readPopularLogger()}>인기 로거 조회하기 </button>
+      </div>
+
+      <div className="p-5 bg-green-500">
+        <button
+          onClick={() =>
+            SignUp({
+              username: "test100",
+              email: "test1234@naver.com",
+              emailVisibility: true,
+              nickname: "test",
+              phone: "010-1234-1234",
+              password: "test1232",
+              passwordConfirm: "test1232",
+              introduce: "테스트계정",
+              interest_field: ["프론트엔드"],
+              allow_proposal: ["채용 제안"],
+              profile_image: "",
+            })
+          }
+        >
+          회원가입{" "}
+        </button>
+      </div>
+
+      <div className="p-5 bg-green-500">
+        <button onClick={() => getProfile("hwby3y9jmyu5imx")}>
+          회원 데이터 조회{" "}
+        </button>
       </div>
     </div>
   );
