@@ -4,9 +4,8 @@ import { userTypes } from "@/types/user";
 import { getProfile } from "./user";
 
 //로그인
-export const Login = (email: string, password: string) =>
-  pb.collection("users").authWithPassword(email, password);
-// console.log(pb.authStore.baseModel);
+export const Login = async (email: string, password: string) =>
+    await pb.collection("users").authWithPassword(email, password);
 
 //소셜로그인
 export const socialLogin = async (provider: string) => {
@@ -28,6 +27,10 @@ export const socialLogin = async (provider: string) => {
 };
 
 // 회원가입
+<<<<<<< HEAD
+export const SignUp = async (data: userTypes) =>
+    await pb.collection("users").create(data);
+=======
 export const SignUp = async (data: userTypes) => {
   try {
     const record = await pb.collection("users").create(data);
@@ -42,11 +45,33 @@ export const SignUp = async (data: userTypes) => {
     console.error("에러발생", err);
   }
 };
+>>>>>>> dev
 
 // 토큰생성
-export const GetToken = () => pb.authStore.token;
+export const GetToken = async () => await pb.authStore.token;
 
 // 토큰 갱신
+<<<<<<< HEAD
+export const tokenRefresh = async () => {
+  try {
+    await pb.collection('users').authRefresh();
+    const updatedToken = await GetToken();
+    return updatedToken;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
+// 이메일 인증
+export const verifyEmail = async (email:string) => {
+  await pb.collection('users').requestVerification(email);
+};
+
+// 비밀번호 변경
+export const requestChangePassword = async (email:string) => 
+  await pb.collection('users').requestPasswordReset(email);
+=======
 export const tokenRefresh = () => {
   if (pb.authStore.isValid) {
     pb.collection("users").authRefresh();
@@ -94,3 +119,4 @@ export const changePassword = async (
     console.error(error);
   }
 };
+>>>>>>> dev

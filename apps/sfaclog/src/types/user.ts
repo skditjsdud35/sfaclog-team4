@@ -17,7 +17,18 @@ export interface userTypes {
     | "ios 개발"
     | "안드로이드 개발"
   )[];
-  allow_proposal?: ("채용 제안" | "의견 제안" | "프로젝트 제안")[];
+  allow_proposal?: (
+    | "채용 제안"
+    | "의견 제안"
+    | "프로젝트 제안"
+  )[];
+  follow?: string;
+  sns?: string[];
+  posts?: string[];
+  resumes?: string[];
+  interest_logs?: string[];
+  series?: string[];
+  is_agreed?: boolean;
 }
 
 export interface loginTypes {
