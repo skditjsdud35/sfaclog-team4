@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@repo/ui": "*",
+    "date-fns": "^3.3.1",
     "next": "14.1.0",
     "pocketbase": "^0.21.0",
     "react": "^18",
