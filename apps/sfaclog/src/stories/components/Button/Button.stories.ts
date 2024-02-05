@@ -11,7 +11,7 @@ const meta: Meta<typeof Button.v1> = {
   component: Button.v1,
   // 컴포넌트에 대한 문서를 자동으로 생성
   tags: ["autodocs"],
-  args: {backgroundColor : "bg-primary-100"},
+  args: { backgroundColor: "bg-primary-100" },
   argTypes: { onClick: { action: "clicked" } },
 };
 
@@ -20,13 +20,22 @@ export default meta;
 // 스토리 타입, Story의 제네릭에 컴포넌트의 타입을 넘겨준다.
 type Story = StoryObj<typeof Button.v1>;
 
-export const Basic: Story = {
+export const TextButton: Story = {
   args: {
-    backgroundColor: "bg-red-300",
+    label: "저장하기",
+
+    color: "primary-white",
+    backgroundColor: "primary-100",
   },
 };
 
-export const Primary: Story = {
+export const TextIconButton: Story = {
+  args: {
+    label: "저장하기",
+  },
+};
+
+export const IconButton: Story = {
   args: {
     label: "테스트",
   },

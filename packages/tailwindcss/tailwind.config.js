@@ -70,12 +70,10 @@ module.exports = {
     },
   },
   plugins: [
-    ({ addUtilities }) => {
+    plugin(({ addUtilities }) => {
       addUtilities({
-        ".Header_B_36": {
-          text: "36px",
-          fontWeight: 700,
-          lineHeight: "150%",
+        ".header_b_36": {
+          "@apply w-[300px] h-[300px]": {},
         },
         ".Header_B_32": {
           text: "32px",
@@ -173,7 +171,8 @@ module.exports = {
           lineHeight: "150%",
         },
       });
-    },
+    }),
+
     // require("prettier-plugin-tailwindcss"  )
   ],
 };
