@@ -10,7 +10,8 @@
     "tailwind.config.ts",
     "types",
     "components",
-    "index.tsx"
+    "index.tsx",
+    "styles/common.ts"
   ],
   "exclude": ["node_modules", "dist"]
 }

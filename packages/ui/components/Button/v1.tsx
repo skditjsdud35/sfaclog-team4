@@ -1,31 +1,33 @@
+import { Common } from "../../styles/common";
+
 export interface ButtonProps {
   onClick?: () => void;
   label?: string;
-
   backgroundColor?: string;
   color?: string;
-  size?: "small" | "medium" | "large";
+  size?: "s" | "r" | "l";
 }
 
 function Button({
   label,
-
   size,
-  backgroundColor,
-  color,
+  backgroundColor = "primary-100",
+  color = "primary-white",
   onClick,
 }: ButtonProps) {
-  let dimensions = "w-10 h-5";
-  if (size === "small") dimensions = "w-5 h-2.5";
-  if (size === "large") dimensions = "w-20 h-10";
-  const bgColor = backgroundColor || "bg-blue-500";
-  const txtColor = color || "bg-blue-500";
-
+  let dimensions = `w-[103px] h-[52px]`;
+  if (size === "s") dimensions = "w-[62px] h-[30px]";
+  if (size === "r") dimensions = "w-[92px] h-[44px]";
+  const bgColor = `bg-${backgroundColor}`;
+  const txtColor = `text-${color}`;
+  console.log(bgColor);
   return (
-    <button className={` ${bgColor} ${txtColor} ${dimensions}  `}>
+    <button className={`${bgColor} ${txtColor} ${dimensions}  `}>
       {label}
     </button>
   );
 }
 
 export default Button;
+
+// 싲가
