@@ -15,13 +15,15 @@ type Story = StoryObj<typeof ModalCard>;
 
 export const pcLogRegister: Story = {
   args: {
-    label: "pc채용모달",
+    label: "pc로그등록하기모달",
+    size: "pc"
   },
 };
 
 export const mobileLogRegister: Story = {
   args: {
-    label: "mobile채용모달",
+    label: "mobile로그등록하기모달",
+    size : "mobile"
   },
 };
 
