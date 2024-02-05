@@ -11,7 +11,7 @@ const meta: Meta<typeof Button.v1> = {
   component: Button.v1,
   // 컴포넌트에 대한 문서를 자동으로 생성
   tags: ["autodocs"],
-  args: {},
+  args: {backgroundColor : "bg-primary-100"},
   argTypes: { onClick: { action: "clicked" } },
 };
 
