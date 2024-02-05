@@ -12,7 +12,6 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    
     "husky": "^8.0.3",
     "prettier": "^3.1.1",
     "react": "^18.2.0",
@@ -29,7 +28,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "pocketbase": "^0.20.3",
-    "next-transpile-modules": "^10.0.1"
+    "axios": "^1.6.7",
+    "next-transpile-modules": "^10.0.1",
+    "pocketbase": "^0.20.3"
   }
 }

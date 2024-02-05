@@ -19,18 +19,10 @@ export const getProfile = (id: string) => {
 };
 
 // 프로필 변경
-export const updateProfile = (id: string) => {
-  const data = {
-    username: "username",
-    nickname: "nickname",
-    introduce: "introduce",
-    phone: "phone",
-    interest_field: ["interest"],
-    sns: ["sns"],
-  };
-
+export const updateProfile = async (id: string, newData: { [key: string]: any }) => {
   try {
-    const record = pb.collection("users").update(id, data);
+    console.log(newData);
+    const record = await pb.collection('users').update(id, newData);
     console.log(record);
   } catch (error) {
     console.error(error);
